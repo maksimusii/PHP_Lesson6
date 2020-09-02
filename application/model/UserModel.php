@@ -61,4 +61,17 @@ class UserModel extends BaseModel {
 
 		return true;
 	}
+
+	public function getRolebyUser($login) {
+		$statement = self::$connection->prepare("SELECT b.login, k.role_name
+																						  FROM user b
+																							LEFT JOIN user_role g ON b.id=g.user_id
+																							LEFT JOIN role k ON g.role_id=k.id 
+																							WHERE b.login = :login");
+		$statement->bindValue(':login', $login, \PDO::PARAM_STR);
+		$statement->execute();
+
+		return $statement->fetch(\PDO::FETCH_ASSOC);
+	}
+
 }

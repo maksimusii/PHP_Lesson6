@@ -42,10 +42,10 @@ class FrontController {
 		}
 
 		list($controller, $action) = explode("/", $this->request->get("path"));
-
 		//HomeController
 		$class = '\\application\\controller\\'.ucfirst($controller)."Controller";
-
+	
+		
 		if (!class_exists($class)) {
 			return $this->view->render("error500");
 		}

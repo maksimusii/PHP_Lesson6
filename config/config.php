@@ -1,7 +1,7 @@
 <?php
 
 return [
-	"title" => "My first framework",
+	"title" => "Lesson 6",
 	"version" => "0.0.1",
 
 	"db"=>[
