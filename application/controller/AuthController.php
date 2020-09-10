@@ -39,7 +39,7 @@ class AuthController extends BaseController {
 
 		$userModel = new UserModel();
 		$user = $userModel->getUserByNameAndPassword($login, $password);
-		$role = ($userModel->getRolebyUser($login))["role_name"];
+		$role = ($userModel->getRoleByUser($login))["role_name"];
 
 		if (!$user) {
 			$this->request->redirect("/?path=auth/index");

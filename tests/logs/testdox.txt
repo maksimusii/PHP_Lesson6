@@ -1,0 +1,16 @@
+Admin Controller (tests\AdminController)
+ [x] Index
+ [x] Admin change status
+
+Auth Controller (tests\AuthController)
+ [x] Auth index
+ [x] Auth sign up
+
+Home Controller (tests\HomeController)
+ [x] Index
+ [x] About
+
+User Model
+ [x] User is existed with data set #0
+ [x] Users db values with data set #0
+

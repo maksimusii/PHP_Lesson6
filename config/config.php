@@ -1,7 +1,7 @@
 <?php
 
 return [
-	"title" => "Lesson 6",
+	"title" => "Lesson 7",
 	"version" => "0.0.1",
 
 	"db"=>[

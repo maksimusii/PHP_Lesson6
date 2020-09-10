@@ -3,6 +3,8 @@
 namespace application\service;
 
 use \application\service\Service;
+use \Monolog\Logger;
+use \Monolog\Handler\StreamHandler;
 
 class FrontController {
 
@@ -10,13 +12,17 @@ class FrontController {
 		$view,
 		$config,
 		$request,
-		$session;
+		$session,
+		$logger;
 	
 	public function __construct() {
 		$this->session = Service::session();
 		$this->view = Service::view();
 		$this->config = Service::config();
 		$this->request = Service::request();
+
+		$this->logger = new Logger('common');
+		$this->logger->pushHandler(new StreamHandler(BASE_PATH.'/logs/common.log', Logger::WARNING));
 	}
 
 	protected function before() {
