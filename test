@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites>
+  <testsuite name="tests" tests="5" assertions="8" errors="0" warnings="0" failures="0" skipped="0" time="0.031046">
+    <testsuite name="tests\AdminControllerTest" file="C:\xampp\htdocs\PHP Advance\Lesson5\public\tests\AdminControllerTest.php" tests="1" assertions="1" errors="0" warnings="0" failures="0" skipped="0" time="0.009357">
+      <testcase name="testIndex" class="tests\AdminControllerTest" classname="tests.AdminControllerTest" file="C:\xampp\htdocs\PHP Advance\Lesson5\public\tests\AdminControllerTest.php" line="10" assertions="1" time="0.009357"/>
+    </testsuite>
+    <testsuite name="tests\AuthControllerTest" file="C:\xampp\htdocs\PHP Advance\Lesson5\public\tests\AuthControllerTest.php" tests="1" assertions="2" errors="0" warnings="0" failures="0" skipped="0" time="0.015107">
+      <testcase name="testAuthIndex" class="tests\AuthControllerTest" classname="tests.AuthControllerTest" file="C:\xampp\htdocs\PHP Advance\Lesson5\public\tests\AuthControllerTest.php" line="10" assertions="2" time="0.015107"/>
+    </testsuite>
+    <testsuite name="tests\HomeControllerTest" file="C:\xampp\htdocs\PHP Advance\Lesson5\public\tests\HomeControllerTest.php" tests="1" assertions="2" errors="0" warnings="0" failures="0" skipped="0" time="0.000981">
+      <testcase name="testIndex" class="tests\HomeControllerTest" classname="tests.HomeControllerTest" file="C:\xampp\htdocs\PHP Advance\Lesson5\public\tests\HomeControllerTest.php" line="10" assertions="2" time="0.000981"/>
+    </testsuite>
+    <testsuite name="UserModelTest" file="C:\xampp\htdocs\PHP Advance\Lesson5\public\tests\UserModelTest.php" tests="2" assertions="3" errors="0" warnings="0" failures="0" skipped="0" time="0.005601">
+      <testcase name="testUserIsExisted" class="UserModelTest" classname="UserModelTest" file="C:\xampp\htdocs\PHP Advance\Lesson5\public\tests\UserModelTest.php" line="9" assertions="1" time="0.005152"/>
+      <testcase name="testUserDelete" class="UserModelTest" classname="UserModelTest" file="C:\xampp\htdocs\PHP Advance\Lesson5\public\tests\UserModelTest.php" line="16" assertions="2" time="0.000449"/>
+    </testsuite>
+  </testsuite>
+</testsuites>

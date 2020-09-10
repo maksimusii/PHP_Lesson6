@@ -17,6 +17,8 @@ class BasketController extends BaseController {
 		$user = $this->session->get("user");
 		
 		$basketModel = new BasketModel();
+		var_dump($user["id"]);
+
 		$items = $basketModel->getUserItems($user["id"]);
 
 		return $this->view->render("basket/index", [

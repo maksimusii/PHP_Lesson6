@@ -62,7 +62,7 @@ class UserModel extends BaseModel {
 		return true;
 	}
 
-	public function getRolebyUser($login) {
+	public function getRoleByUser($login) {
 		$statement = self::$connection->prepare("SELECT b.login, k.role_name
 																						  FROM user b
 																							LEFT JOIN user_role g ON b.id=g.user_id
