@@ -56,5 +56,6 @@ class Service {
         {
             return self::$_registry["cookie"];
         }
-	}
+    }
+
 }

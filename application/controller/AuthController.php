@@ -5,6 +5,7 @@ namespace application\controller;
 use \application\service\Service;
 use \application\controller\BaseController;
 use \application\model\UserModel;
+use \application\service\Helper;
 
 /**
  * /?path=auth/{action}
@@ -39,14 +40,14 @@ class AuthController extends BaseController {
 
 		$userModel = new UserModel();
 		$user = $userModel->getUserByNameAndPassword($login, $password);
-		$role = ($userModel->getRoleByUser($login))["role_name"];
-
+		
+		Helper::setRole($login);
+		
 		if (!$user) {
 			$this->request->redirect("/?path=auth/index");
 		}
 
 		$this->session->set("user", $user);
-		$this->session->set("role", $role);
 		$this->request->redirect("/?path=user/index");
 	}
 

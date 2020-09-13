@@ -3,6 +3,7 @@
 namespace application\controller;
 
 use \application\service\Service;
+use \application\service\Helper;
 use \application\controller\BaseController;
 use \application\model\AdminModel;
 
@@ -16,18 +17,16 @@ class AdminController extends BaseController {
   public function action_index() {
 
 		$user = $this->session->get("user");
-		$role = $this->session->get("role");
+		
 		
 		$adminModel = new AdminModel();
 		$items = $adminModel->getOrders();
+
+		return $this->view->render(Helper::getPageRestriction("Admin", "admin/index"), [
+			"items"=>$items
+		]);
+
 		
-		if ($role == "Admin") {
-			return $this->view->render("admin/index", [
-				"items"=>$items
-			]);
-		} else {
-			return $this->view->render("PageUnavailable");
-		}
 		
 	}	
 	public function action_changeStatus() {
