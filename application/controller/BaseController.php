@@ -11,6 +11,7 @@ class BaseController extends FrontController {
 	public function before() {
 		$this->view->addGlobal('title', $this->config->get("title"));
 		$this->view->addGlobal('user', $this->session->get("user"));
+		$this->view->addGlobal('role', $this->session->get("role"));
 
 		if ($this->session->get("user")) {
 			$userModel = new UserModel();
